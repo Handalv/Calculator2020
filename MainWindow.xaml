@@ -22,9 +22,7 @@
             <RowDefinition Height="0.1*"/>
 			<RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.1*"/>
-			<RowDefinition Height="0.5*"/>
-            <RowDefinition Height="0.1*"/>
-		</Grid.RowDefinitions>
+        </Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.1*"/>
 			<ColumnDefinition Width="*"/>
@@ -40,30 +38,30 @@
 		<TextBox Name="TB_Operation" Text="" Grid.Row="1"  Grid.Column="1"  Grid.ColumnSpan="7" IsReadOnly="True" FontSize="22" FontFamily="Comic Sans MS" TextAlignment="Right"/>
 		<TextBox Name="TB_Input" Text="" Grid.Row="2"  Grid.Column="1"  Grid.ColumnSpan="7" IsReadOnly="True" FontSize="36" FontFamily="Comic Sans MS" TextAlignment="Right"/>
 
-		<Button Name="B_ClearInput" Content="CE" Grid.Row="4" Grid.Column="3" Click="B_ClearInput_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS" ClipToBounds="True" Padding="18,1,1,1"/>
-		<Button Name="B_Clear" Content="C" Grid.Row="4" Grid.Column="5" Click="B_Clear_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Back" Content="←" Grid.Row="4" Grid.Column="7" Click="B_Back_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_ClearInput" Content="CE" Grid.Row="4" Grid.Column="1" Click="B_ClearInput_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS" ClipToBounds="True" Padding="18,1,1,1"/>
+		<Button Name="B_Clear" Content="C" Grid.Row="4" Grid.Column="3" Click="B_Clear_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Back" Content="←" Grid.Row="4" Grid.Column="5" Click="B_Back_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
 		
 
-		<Button Name="B_Sum" Content="+" Grid.Row="6" Grid.Column="1" Click="B_Operator_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Subtr" Content="-" Grid.Row="6" Grid.Column="3" Click="B_Operator_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Mult" Content="*" Grid.Row="6" Grid.Column="5" Click="B_Operator_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Sum" Content="+" Grid.Row="10" Grid.Column="7" Click="B_Operator_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Subtr" Content="-" Grid.Row="8" Grid.Column="7" Click="B_Operator_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Mult" Content="*" Grid.Row="4" Grid.Column="7" Click="B_Operator_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
 		<Button Name="B_Div" Content="÷" Grid.Row="6" Grid.Column="7" Click="B_Operator_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
 
-		<Button Name="B_Num1" Content="1" Grid.Row="8" Grid.Column="1" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Num2" Content="2" Grid.Row="8" Grid.Column="3" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Num3" Content="3" Grid.Row="8" Grid.Column="5" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Num4" Content="4" Grid.Row="10" Grid.Column="1" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Num5" Content="5" Grid.Row="10" Grid.Column="3" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Num6" Content="6" Grid.Row="10" Grid.Column="5" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Num7" Content="7" Grid.Row="12" Grid.Column="1" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Num8" Content="8" Grid.Row="12" Grid.Column="3" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Num9" Content="9" Grid.Row="12" Grid.Column="5" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		<Button Name="B_Num0" Content="0" Grid.Row="14" Grid.Column="3" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
-		
-		<Button Name="B_Dot" Content="," Grid.Row="14" Grid.Column="5" Click="B_Dot_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Num1" Content="1" Grid.Row="6" Grid.Column="1" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Num2" Content="2" Grid.Row="6" Grid.Column="3" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Num3" Content="3" Grid.Row="6" Grid.Column="5" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Num4" Content="4" Grid.Row="8" Grid.Column="1" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Num5" Content="5" Grid.Row="8" Grid.Column="3" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Num6" Content="6" Grid.Row="8" Grid.Column="5" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Num7" Content="7" Grid.Row="10" Grid.Column="1" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Num8" Content="8" Grid.Row="10" Grid.Column="3" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Num9" Content="9" Grid.Row="10" Grid.Column="5" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+		<Button Name="B_Num0" Content="0" Grid.Row="12" Grid.Column="3" Click="B_Num_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
 
-		<Button Name="B_Equally" Content="=" Grid.Row="14" Grid.Column="7" Click="B_Equally_Click" Background="#FFF4F9D6" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+        <Button Name="B_Sign" Content="+/-" Grid.Row="12" Grid.Column="1" Click="B_Sign_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+        <Button Name="B_Dot" Content="." Grid.Row="12" Grid.Column="5" Click="B_Dot_Click" Background="#FFC8D8D8" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+        <Button Name="B_Equally" Content="=" Grid.Row="12" Grid.Column="7" Click="B_Equally_Click" Background="#FFF4F9D6" FontSize="36" FontWeight="Bold" FontFamily="Comic Sans MS"/>
 
 
 	</Grid>

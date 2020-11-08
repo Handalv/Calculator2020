@@ -41,7 +41,15 @@ namespace Calculator2020
         {
             if (!IsDotWritten)
             {
-                TB_Input.Text += ",";
+                if (TB_Input.Text == "")
+                {
+                    TB_Input.Text = "0,";
+                    
+                }
+                else
+                {
+                    TB_Input.Text += ",";
+                }
                 IsDotWritten = true;
             }
         }
@@ -51,7 +59,7 @@ namespace Calculator2020
             if (TB_Input.Text.Length > 0)
             {
                 Char lastSymbol = TB_Input.Text.Last();
-                if (lastSymbol == '.')
+                if (lastSymbol == ',')
                 {
                     IsDotWritten = false;
                 }
@@ -99,7 +107,24 @@ namespace Calculator2020
 
         private void B_ClearInput_Click(object sender, RoutedEventArgs e)
         {
+            IsDotWritten = false;
             TB_Input.Text = "";
+        }
+
+        private void B_Sign_Click(object sender, RoutedEventArgs e)
+        {
+            if(TB_Input.Text == "")
+            {
+                TB_Input.Text = "-0";
+            }
+            else if (TB_Input.Text[0] == '-')
+            {
+                TB_Input.Text = TB_Input.Text.Remove(0, 1);
+            }
+            else
+            {
+                TB_Input.Text = "-" + TB_Input.Text;
+            }
         }
 
         private void B_Equally_Click(object sender, RoutedEventArgs e)
@@ -136,6 +161,14 @@ namespace Calculator2020
                         break;
                 }
                 Operator = null;
+                if (TB_Input.Text.Contains(','))
+                {
+                    IsDotWritten = true;
+                }
+                else
+                {
+                    IsDotWritten = false;
+                }
             }
         } 
     }
