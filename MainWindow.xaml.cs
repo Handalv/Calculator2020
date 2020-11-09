@@ -156,7 +156,7 @@ namespace Calculator2020
                     TB_Input.Text = "" + (Num1 - (Num1 / 100 * Num2));
                     break;
                 case "*":
-                    TB_Input.Text = "" + (Num1 * (Num1 / 100 * Num2));
+                    TB_Input.Text = "" + (Num1 / 100 * Num2);
                     break;
                 case "÷":
                     TB_Input.Text = "" + (Num1 / (Num1 / 100 * Num2));
