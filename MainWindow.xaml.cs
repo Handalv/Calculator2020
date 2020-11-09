@@ -73,6 +73,10 @@ namespace Calculator2020
             {
                 Button button = (Button)sender;
                 Operator = "" + button.Content;
+                if (Operator == "x²")
+                {
+                    Operator = "^";
+                }
 
                 if (TB_Input.Text != "")
                 {
@@ -127,6 +131,79 @@ namespace Calculator2020
             }
         }
 
+        private void B_Percent_Click(object sender, RoutedEventArgs e)
+        {
+            if (Operator != null)
+            {
+                if (TB_Input.Text != "")
+                {
+                    Num2 = float.Parse(TB_Input.Text);
+                }
+                else
+                {
+                    Num2 = 0;
+                }
+
+                TB_Operation.Text += Num2 + "% =";
+            }
+
+            switch (Operator)
+            {
+                case "+":
+                    TB_Input.Text = "" + (Num1 + (Num1 / 100 * Num2));
+                    break;
+                case "-":
+                    TB_Input.Text = "" + (Num1 - (Num1 / 100 * Num2));
+                    break;
+                case "*":
+                    TB_Input.Text = "" + (Num1 * (Num1 / 100 * Num2));
+                    break;
+                case "÷":
+                    TB_Input.Text = "" + (Num1 / (Num1 / 100 * Num2));
+                    break;
+                case "^":
+                    TB_Input.Text = "" + (Math.Pow(Num1, (Num1 / 100 * Num2)));
+                    break;
+                default:
+                    TB_Input.Text = "Operator Error";
+                    break;
+            }
+
+            Operator = null;
+            if (TB_Input.Text.Contains(','))
+            {
+                IsDotWritten = true;
+            }
+            else
+            {
+                IsDotWritten = false;
+            }
+        }
+
+        private void B_Square_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void B_Sqrt_Click(object sender, RoutedEventArgs e)
+        {
+            if (Operator == null)
+            {
+                if (TB_Input.Text != "")
+                {
+                    Num1 = float.Parse(TB_Input.Text);
+                }
+                else
+                {
+                    Num1 = 0;
+                }
+
+                TB_Operation.Text = "√" + Num1 + "=";
+
+                TB_Input.Text = "" + Math.Sqrt(Num1);
+            }
+        }
+
         private void B_Equally_Click(object sender, RoutedEventArgs e)
         {
             if (Operator != null)
@@ -156,10 +233,14 @@ namespace Calculator2020
                     case "÷":
                         TB_Input.Text = "" + (Num1 / Num2);
                         break;
+                    case "^":
+                        TB_Input.Text = "" + (Math.Pow(Num1,Num2));
+                        break;
                     default:
                         TB_Input.Text = "Operator Error";
                         break;
                 }
+
                 Operator = null;
                 if (TB_Input.Text.Contains(','))
                 {
